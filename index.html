@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-3</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        white: "#fff",
+                        gray: {
+                            "100": "#131318",
+                            "200": "rgba(19, 19, 24, 0.5)",
+                            "300": "rgba(19, 19, 24, 0.6)",
+                            "400": "rgba(19, 19, 24, 0.2)",
+                            "500": "rgba(19, 19, 24, 0.4)",
+                            "600": "rgba(19, 19, 24, 0.1)",
+                            "700": "rgba(19, 19, 24, 0.3)",
+                            "800": "rgba(19, 19, 24, 0.03)",
+                            "900": "rgba(255, 255, 255, 0.8)",
+                            "1000": "rgba(255, 255, 255, 0.6)",
+                        },
+                        tomato: {
+                            "100": "#ff5c59",
+                            "200": "#ff4240",
+                        },
+                        cornflowerblue: "rgba(98, 156, 243, 0.1)",
+                        khaki: "rgba(253, 221, 95, 0.1)",
+                        yellowgreen: "rgba(188, 237, 109, 0.1)",
+                        "dark-02": "#424247",
+                    },
+                    spacing: {},
+                    fontFamily: {
+                        manrope: "Manrope",
+                    },
+                },
+                fontSize: {
+                    base: "1rem",
+                    lg: "1.13rem",
+                    "9xl": "1.75rem",
+                    "3xl": "1.38rem",
+                    "5xl": "1.5rem",
+                    lgi: "1.19rem",
+                    xl: "1.25rem",
+                    "17xl": "2.25rem",
+                    "10xl": "1.81rem",
+                    inherit: "inherit",
+                },
+                screens: {
+                    mq1500: {
+                        raw: "screen and (max-width: 1500px)",
+                    },
+                    mq1225: {
+                        raw: "screen and (max-width: 1225px)",
+                    },
+                    mq850: {
+                        raw: "screen and (max-width: 850px)",
+                    },
+                    mq450: {
+                        raw: "screen and (max-width: 450px)",
+                    },
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+
+    </script>
+</head>
+
+<body>
+    <div
+        class="w-full relative bg-white overflow-hidden flex flex-col items-center justify-start pt-[3.13rem] px-[0rem] pb-[0rem] box-border gap-[6.25rem] tracking-[normal] mq450:gap-[1.56rem] mq850:gap-[3.13rem]">
+        <section
+            class="w-[75.63rem] flex flex-col items-start justify-start py-[0rem] px-[1.25rem] box-border gap-[3.13rem] max-w-full text-left text-[1.5rem] text-white font-manrope mq850:gap-[1.56rem]">
+            <header
+                class="self-stretch flex flex-row items-center justify-between gap-[1.25rem] max-w-full text-left text-[2.25rem] text-gray-100 font-manrope">
+                <h1
+                    class="m-0 h-[3.06rem] relative text-inherit font-extrabold font-inherit inline-block whitespace-nowrap">
+                    <span>Hockey</span>
+                    <span class="text-tomato-200">’</span>
+                    <span>s</span>
+                </h1>
+                <div
+                    class="w-[26rem] flex flex-row items-start justify-start py-[0rem] pr-[0.56rem] pl-[0rem] box-border gap-[2.75rem] max-w-full text-center text-[1rem] text-dark-02 mq450:gap-[1.38rem] mq850:hidden">
+                    <b class="h-[1.38rem] relative inline-block text-tomato-200">Home</b>
+                    <div class="h-[1.38rem] relative inline-block">About</div>
+                    <div class="relative">Pages</div>
+                    <div class="relative">Blog</div>
+                    <div class="relative">Contact</div>
+                </div>
+                <div class="flex flex-row items-center justify-start gap-[1.5rem]">
+                    <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0" loading="eager" alt=""
+                        src="public/frame.svg" />
+
+                    <button
+                        class="cursor-pointer [border:none] py-[0.94rem] pr-[1.13rem] pl-[1.5rem] bg-tomato-200 rounded-lg flex flex-row items-center justify-end whitespace-nowrap hover:bg-tomato-100">
+                        <b
+                            class="h-[1.69rem] relative text-[1.25rem] inline-block font-manrope text-white text-center whitespace-nowrap">Get
+                            Ticket</b>
+                    </button>
+                </div>
+            </header>
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="public/rectangle-1@2x.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="public/Miracle-Halloween-1040x572.jpeg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="public/images.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="public/images (1).jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+            <div 
+                class="w-[35.38rem] absolute top-[37.88rem] left-[41.19rem] rounded-2xl bg-gray-100 flex flex-col items-center justify-start p-[2rem] box-border gap-[1rem] max-w-full z-[1]">
+                <div class="self-stretch flex flex-row items-start justify-start">
+                    <h3
+                        class="m-0 h-[2.06rem] relative text-inherit font-extrabold font-inherit inline-block mq450:text-[1.19rem]">
+                        Meet all the heroes from the field
+                    </h3>
+                </div>
+                <div
+                    class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] font-medium text-gray-1000 inline-block">
+                    Welcome to the heart of the game, where passion meets skill and every goal is a triumph. Our hockey heroes are the driving force behind the excitement you feel on the ice.
+            </div>
+    </section>
+    <section
+        class="w-[75.63rem] flex flex-col items-center justify-start py-[0rem] px-[1.25rem] box-border gap-[2rem] max-w-full text-center text-[2.25rem] text-gray-100 font-manrope mq850:gap-[1rem]">
+        <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400"></div>
+        <div
+            class="self-stretch flex flex-col items-center justify-start gap-[2rem] min-h-[10.81rem] max-w-full shrink-0 mq850:gap-[1rem]">
+            <div class="w-[37.94rem] flex flex-col items-center justify-start gap-[1.5rem] max-w-full">
+                <h1
+                    class="m-0 h-[3.06rem] relative text-inherit font-extrabold font-inherit inline-block max-w-full mq450:text-[1.38rem] mq850:text-[1.81rem]">
+                    Professional Hockeys Club
+                </h1>
+                <div
+                    class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] font-medium text-gray-300 inline-block">
+                    Established in [1999], the hockeys club has become synonymous with hockey excellence. Navigate through the rich history, iconic victories, and the spirit that defines us as a powerhouse in the world of professional sports.
+                </div>
+            </div>
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+        </div>
+        <div
+            class="w-[68.5rem] flex flex-row flex-wrap items-start justify-start gap-[2rem] max-w-full text-[1.75rem] mq850:gap-[1rem]">
+            <div class="flex-1 flex flex-col items-center justify-start gap-[1.5rem] min-w-[14.38rem] max-w-[15.63rem]">
+                <div class="flex flex-row items-center justify-center py-[2.56rem] pr-[2.19rem] pl-[1.94rem] relative">
+                    <img class="h-full w-full absolute my-0 mx-[!important] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] max-w-full overflow-hidden max-h-full"
+                        loading="eager" alt="" src="public/group-9.svg" />
+
+                    <div class="h-[2.38rem] relative font-extrabold inline-block z-[1] mq450:text-[1.38rem]">
+                        87%
+                    </div>
+                </div>
+                <div class="self-stretch flex flex-col items-center justify-start gap-[1rem] text-[1.25rem]">
+                    <div class="relative font-semibold mq450:text-[1rem]">
+                        Prayer Facility
+                    </div>
+                    <div
+                        class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] text-gray-300 inline-block">
+                        Our prayer facility is a haven for individuals seeking solace, peace, and a quiet moment of communion with the divine.
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col items-center justify-start gap-[1.5rem] min-w-[14.38rem] max-w-[15.63rem]">
+                <div class="flex flex-row items-center justify-center py-[2.56rem] pr-[2.13rem] pl-[1.88rem] relative">
+                    <img class="h-full w-full absolute my-0 mx-[!important] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] max-w-full overflow-hidden max-h-full"
+                        loading="eager" alt="" src="public/group-9-1.svg">
+
+                    <div class="h-[2.38rem] relative font-extrabold inline-block z-[1] mq450:text-[1.38rem]">
+                        95%
+                    </div>
+                </div>
+                <div class="self-stretch flex flex-col items-center justify-start gap-[1rem] text-[1.25rem]">
+                    <div class="relative font-semibold mq450:text-[1rem]">
+                        Experienced Coach
+                    </div>
+                    <div
+                        class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] text-gray-300 inline-block">
+                        Introducing our esteemed coach, Ragib, a seasoned mentor with a wealth of experience and a passion for developing champions.
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col items-center justify-start gap-[1.5rem] min-w-[14.38rem] max-w-[15.63rem]">
+                <div class="flex flex-row items-center justify-center py-[2.56rem] pr-[2.06rem] pl-[1.81rem] relative">
+                    <img class="h-full w-full absolute my-0 mx-[!important] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] max-w-full overflow-hidden max-h-full"
+                        loading="eager" alt="" src="public/group-9-2.svg">
+
+                    <div class="h-[2.38rem] relative font-extrabold inline-block z-[1] mq450:text-[1.38rem]">
+                        90%
+                    </div>
+                </div>
+                <div class="self-stretch flex flex-col items-center justify-start gap-[1rem] text-[1.25rem]">
+                    <div class="relative font-semibold mq450:text-[1rem]">
+                        Senior Player
+                    </div>
+                    <div
+                        class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] text-gray-300 inline-block">
+                        we are honored to spotlight the remarkable career and enduring passion of our senior player, Asad. 
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col items-center justify-start gap-[1.5rem] min-w-[14.38rem] max-w-[15.63rem]">
+                <div class="flex flex-row items-center justify-center py-[2.56rem] pr-[2.06rem] pl-[1.81rem] relative">
+                    <img class="h-full w-full absolute my-0 mx-[!important] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] max-w-full overflow-hidden max-h-full"
+                        loading="eager" alt="" src="public/group-9-3.svg">
+
+                    <div class="h-[2.38rem] relative font-extrabold inline-block z-[1] mq450:text-[1.38rem]">
+                        80%
+                    </div>
+                </div>
+                <div class="self-stretch flex flex-col items-center justify-start gap-[1rem] text-[1.25rem]">
+                    <div class="relative font-semibold mq450:text-[1rem]">
+                        Training Ground
+                    </div>
+                    <div
+                        class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] text-gray-300 inline-block">
+                        Our training ground is equipped with the latest in sports technology and infrastructure.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="w-[75.63rem] flex flex-col items-start justify-start py-[0rem] px-[1.25rem] box-border gap-[3rem] max-w-full text-center text-[2.25rem] text-gray-100 font-manrope mq850:gap-[1.5rem]">
+        <div class="self-stretch flex flex-col items-center justify-start gap-[2rem] max-w-full mq850:gap-[1rem]">
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+            <div class="w-[37.94rem] flex flex-col items-center justify-start gap-[1.5rem] max-w-full shrink-0">
+                <h1
+                    class="m-0 h-[3.06rem] relative text-inherit font-extrabold font-inherit inline-block mq450:text-[1.38rem] mq850:text-[1.81rem]">
+                    Program Sections
+                </h1>
+                <div
+                    class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] font-medium text-gray-300 inline-block">
+                    Elevate your game with our comprehensive sports and athletics programs. From youth development to elite training, we provide a platform for athletes to excel, compete, and achieve their highest potential.
+                </div>
+            <div class="flex flex-row gap-4">
+            <div class=" flex-1 rounded-2xl bg-gray-200 flex flex-row items-center justify-start pt-[5.94rem] pb-[2.5rem] pr-[2.38rem] pl-[2.5rem] box-border gap-[1.5rem] max-w-full z-[1]">
+    
+                    <div class="card w-96 bg-base-100 shadow-xl image-full">
+                      <figure><img src="public/2.png" alt="Shoes" /></figure>
+                      <div class="card-body">
+                        <h2 class="card-title">Junior Program</h2>
+                        <p>Our Junior Program is crafted to provide a nurturing environment.</p>
+                        <button
+                  class="cursor-pointer py-[0.63rem] pr-[0.88rem] pl-[1.38rem] bg-tomato-200 w-[11.25rem] rounded-lg box-border flex flex-row items-center justify-end whitespace-nowrap z-[2] border-[1px] border-solid border-tomato-200 hover:bg-tomato-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-tomato-100"
+                >
+                  <b
+                    class="flex-1 relative text-[1.25rem] font-manrope text-white text-center"
+                    >Register Now!</b
+                  >
+                </button>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="flex-1 rounded-2xl bg-gray-200 flex flex-row items-center justify-start pt-[5.94rem] pb-[2.5rem] pr-[2.38rem] pl-[2.5rem] box-border gap-[1.5rem] max-w-full z-[1]">
+                        <div class="card w-96 bg-base-100 shadow-xl image-full">
+                          <figure><img src="public/rectangle-11@2x.png" alt="Shoes" /></figure>
+                          <div class="card-body">
+                            <h2 class="card-title">Teenager Program</h2>
+                            <p>a dynamic initiative designed for the spirited youth seeking a platform.</p>
+                            <button
+                      class="cursor-pointer py-[0.63rem] pr-[0.88rem] pl-[1.38rem] bg-tomato-200 w-[11.25rem] rounded-lg box-border flex flex-row items-center justify-end whitespace-nowrap z-[2] border-[1px] border-solid border-tomato-200 hover:bg-tomato-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-tomato-100"
+                    >
+                      <b
+                        class="flex-1 relative text-[1.25rem] font-manrope text-white text-center"
+                        >Register Now!</b
+                      >
+                    </button>
+                          </div>
+                        </div>
+                        </div>
+            </div>
+                
+                
+                
+                <div class="flex-1 rounded-2xl bg-gray-200 flex flex-row items-center justify-start pt-[5.94rem] pb-[2.5rem] pr-[2.38rem] pl-[2.5rem] box-border gap-[1.5rem] max-w-full z-[1]">
+                  <div class="card w-96 bg-base-100 shadow-xl image-full">
+                    <figure><img src="public/rectangle-12@2x.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Professional Program</h2>
+                      <p>in a journey of elite training,strategic mentorship, and professional development.</p>
+                      <button
+                class="cursor-pointer py-[0.63rem] pr-[0.88rem] pl-[1.38rem] bg-tomato-200 w-[11.25rem] rounded-lg box-border flex flex-row items-center justify-end whitespace-nowrap z-[2] border-[1px] border-solid border-tomato-200 hover:bg-tomato-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-tomato-100"
+              >
+                <b
+                  class="flex-1 relative text-[1.25rem] font-manrope text-white text-center"
+                  >Register Now!</b
+                >
+              </button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            
+            
+
+    </section>
+
+
+
+
+    <section
+        class="w-[75.63rem] flex flex-col items-start justify-start py-[0rem] px-[1.25rem] box-border gap-[1.5rem] max-w-full text-left text-[1rem] text-gray-200 font-manrope">
+        <div
+            class="self-stretch h-[0.5rem] flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.5rem] box-border max-w-full">
+            <div class="h-[0.06rem] flex-1 relative box-border max-w-full border-t-[1px] border-dashed border-gray-400">
+            </div>
+        </div>
+        <div
+            class="self-stretch flex flex-col items-center justify-start gap-[2rem] min-h-[11.31rem] max-w-full text-center text-[2.25rem] text-gray-100 mq850:gap-[1rem]">
+            <div class="w-[37.94rem] flex flex-col items-center justify-start gap-[1.5rem] max-w-full">
+                <h1
+                    class="m-0 h-[3.06rem] relative text-inherit font-extrabold font-inherit inline-block mq450:text-[1.38rem] mq850:text-[1.81rem]">
+                    Our New Products
+                </h1>
+                <div
+                    class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] font-medium text-gray-300 inline-block">
+                    Innovation is at the heart of everything we do. We are thrilled to present our latest creations a range of new products designed to enhance your experience.
+                </div>
+            </div>
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+        </div>
+        <div class="self-stretch flex flex-row flex-wrap items-start justify-start gap-[1.5rem] max-w-full">
+            <div
+                class="flex-1 rounded-2xl box-border flex flex-row items-start justify-start pt-[1.5rem] pb-[1.38rem] pr-[2.38rem] pl-[1.5rem] gap-[1.25rem] min-w-[23.25rem] max-w-full border-[1px] border-solid border-gray-600 mq450:min-w-full mq850:flex-wrap">
+                <div
+                    class="h-[13.63rem] w-[35.81rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                </div>
+                <img class="self-stretch w-[11.25rem] relative rounded-xl max-h-full object-cover min-h-[10.75rem] z-[1] mq850:flex-1"
+                    loading="eager" alt="" src="public/rectangle-4@2x.png">
+
+                <div class="flex-1 flex flex-col items-start justify-start gap-[0.75rem] min-w-[12.63rem]">
+                    <div class="flex flex-row items-start justify-start gap-[1.19rem]">
+                        <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                loading="eager" alt="" src="public/frame-1.svg">
+
+                            <div class="relative font-medium z-[1]">5.0</div>
+                        </div>
+                        <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                loading="eager" alt="" src="public/frame-2.svg">
+
+                            <div class="relative font-medium z-[1]">20</div>
+                        </div>
+                        <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                loading="eager" alt="" src="public/frame-3.svg">
+
+                            <div class="relative font-medium z-[1]">200</div>
+                        </div>
+                    </div>
+                    <div class="relative text-[1.25rem] font-extrabold text-gray-100 z-[1] mq450:text-[1rem]">
+                        World Cup Flags Football
+                    </div>
+                    <div
+                        class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.25rem] text-gray-300">
+                        <div class="h-[3.25rem] flex-1 relative leading-[1.63rem] font-medium inline-block z-[1]">
+                        Gear up for the ultimate football experience with our World Cup Flags.
+                        </div>
+                    </div>
+                    <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0.5rem] text-[1.13rem] text-tomato-200 mq450:flex-wrap">
+                        <div
+                            class="flex-[0.9118] flex flex-col items-start justify-start py-[0rem] pr-[0.75rem] pl-[0rem] box-border min-w-[5.5rem] mq450:flex-1">
+                            <div class="relative leading-[1.63rem] font-extrabold z-[1]">
+                                Price - $22.00
+                            </div>
+                        </div>
+                        <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 z-[1]" alt=""
+                            src="public/frame-4.svg">
+
+                        <div
+                            class="flex-1 relative text-[1rem] font-medium text-gray-200 inline-block min-w-[5.5rem] z-[1]">
+                            Delivery Fee : Free
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex-1 rounded-2xl box-border flex flex-row items-start justify-start pt-[1.5rem] pb-[1.38rem] pr-[2.38rem] pl-[1.5rem] gap-[1.25rem] min-w-[23.25rem] max-w-full border-[1px] border-solid border-gray-600 mq450:min-w-full mq850:flex-wrap">
+                <div
+                    class="h-[13.63rem] w-[35.81rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                </div>
+                <img class="self-stretch w-[11.25rem] relative rounded-xl max-h-full object-cover min-h-[10.75rem] z-[1] mq850:flex-1"
+                    loading="eager" alt="" src="public/rectangle-4-1@2x.png">
+
+                <div class="flex-1 flex flex-col items-start justify-start gap-[0.75rem] min-w-[12.63rem]">
+                    <div class="flex flex-row items-start justify-start gap-[1.19rem]">
+                        <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                alt="" src="public/frame-5.svg">
+
+                            <div class="relative font-medium z-[1]">5.0</div>
+                        </div>
+                        <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                alt="" src="public/frame-2.svg">
+
+                            <div class="relative font-medium z-[1]">20</div>
+                        </div>
+                        <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                alt="" src="public/frame-3.svg">
+
+                            <div class="relative font-medium z-[1]">200</div>
+                        </div>
+                    </div>
+                    <div class="relative text-[1.25rem] font-extrabold text-gray-100 z-[1] mq450:text-[1rem]">
+                        World Cup Flags Football
+                    </div>
+                    <div
+                        class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.25rem] text-gray-300">
+                        <div class="h-[3.25rem] flex-1 relative leading-[1.63rem] font-medium inline-block z-[1]">
+                            Gear up for the ultimate football experience with our World Cup Flags.
+                        </div>
+                    </div>
+                    <div
+                        class="self-stretch flex flex-row items-center justify-start gap-[0.5rem] text-[1.13rem] text-tomato-200 mq450:flex-wrap">
+                        <div
+                            class="flex-[0.9118] flex flex-col items-start justify-start py-[0rem] pr-[0.75rem] pl-[0rem] box-border min-w-[5.5rem] mq450:flex-1">
+                            <div class="relative leading-[1.63rem] font-extrabold z-[1]">
+                                Price - $22.00
+                            </div>
+                        </div>
+                        <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 z-[1]" alt=""
+                            src="public/frame-4.svg">
+
+                        <div
+                            class="flex-1 relative text-[1rem] font-medium text-gray-200 inline-block min-w-[5.5rem] z-[1]">
+                            Delivery Fee : Free
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="self-stretch flex flex-col items-start justify-start gap-[1.5rem] max-w-full">
+            <div class="self-stretch flex flex-row flex-wrap items-start justify-start gap-[1.5rem] max-w-full">
+                <div
+                    class="flex-1 rounded-2xl box-border flex flex-row items-start justify-start pt-[1.5rem] pb-[1.38rem] pr-[2.38rem] pl-[1.5rem] gap-[1.25rem] min-w-[23.25rem] max-w-full border-[1px] border-solid border-gray-600 mq450:min-w-full mq850:flex-wrap">
+                    <div
+                        class="h-[13.63rem] w-[35.81rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                    </div>
+                    <img class="self-stretch w-[11.25rem] relative rounded-xl max-h-full object-cover min-h-[10.75rem] z-[1] mq850:flex-1"
+                        loading="eager" alt="" src="public/rectangle-4-2@2x.png">
+
+                    <div class="flex-1 flex flex-col items-start justify-start gap-[0.75rem] min-w-[12.63rem]">
+                        <div class="flex flex-row items-start justify-start gap-[1.19rem]">
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-9.svg">
+
+                                <div class="relative font-medium z-[1]">5.0</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-10.svg">
+
+                                <div class="relative font-medium z-[1]">20</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-11.svg">
+
+                                <div class="relative font-medium z-[1]">200</div>
+                            </div>
+                        </div>
+                        <div class="relative text-[1.25rem] font-extrabold text-gray-100 z-[1] mq450:text-[1rem]">
+                            Cap For Hockeys
+                        </div>
+                        <div class="self-stretch flex flex-col items-start justify-start gap-[1rem] text-gray-300">
+                            <div
+                                class="self-stretch h-[3.25rem] relative leading-[1.63rem] font-medium inline-block z-[1]">
+                                Gear up for the ultimate football experience with our World Cup Flags.
+                            </div>
+                            <div
+                                class="self-stretch flex flex-row items-center justify-start gap-[0.5rem] text-[1.13rem] text-tomato-200 mq450:flex-wrap">
+                                <div
+                                    class="flex-[0.9118] flex flex-col items-start justify-start py-[0rem] pr-[0.75rem] pl-[0rem] box-border min-w-[5.5rem] mq450:flex-1">
+                                    <div class="relative leading-[1.63rem] font-extrabold z-[1]">
+                                        Price - $22.00
+                                    </div>
+                                </div>
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 z-[1]"
+                                    loading="eager" alt="" src="public/frame-12.svg">
+
+                                <div
+                                    class="flex-1 relative text-[1rem] font-medium text-gray-200 inline-block min-w-[5.5rem] z-[1]">
+                                    Delivery Fee : Free
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex-1 rounded-2xl box-border flex flex-row items-start justify-start pt-[1.5rem] pb-[1.38rem] pr-[2.38rem] pl-[1.5rem] gap-[1.25rem] min-w-[23.25rem] max-w-full border-[1px] border-solid border-gray-600 mq450:min-w-full mq850:flex-wrap">
+                    <div
+                        class="h-[13.63rem] w-[35.81rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                    </div>
+                    <img class="self-stretch w-[11.25rem] relative rounded-xl max-h-full object-cover min-h-[10.75rem] z-[1] mq850:flex-1"
+                        loading="eager" alt="" src="public/rectangle-4-3@2x.png">
+
+                    <div class="flex-1 flex flex-col items-start justify-start gap-[0.75rem] min-w-[12.63rem]">
+                        <div class="flex flex-row items-start justify-start gap-[1.19rem]">
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    alt="" src="public/frame-13.svg">
+
+                                <div class="relative font-medium z-[1]">5.0</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    alt="" src="public/frame-10.svg">
+
+                                <div class="relative font-medium z-[1]">20</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    alt="" src="public/frame-11.svg">
+
+                                <div class="relative font-medium z-[1]">200</div>
+                            </div>
+                        </div>
+                        <div class="relative text-[1.25rem] font-extrabold text-gray-100 z-[1] mq450:text-[1rem]">
+                            World Cup Flags Football
+                        </div>
+                        <div
+                            class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.25rem] text-gray-300">
+                            <div class="h-[3.25rem] flex-1 relative leading-[1.63rem] font-medium inline-block z-[1]">
+                                Gear up for the ultimate football experience with our World Cup Flags.
+                            </div>
+                        </div>
+                        <div
+                            class="self-stretch flex flex-row items-center justify-start gap-[1.25rem] text-[1.13rem] text-tomato-200 mq450:flex-wrap">
+                            <div class="relative leading-[1.63rem] font-extrabold z-[1]">
+                                Price - $22.00
+                            </div>
+                            <div
+                                class="flex flex-row items-center justify-start gap-[0.5rem] text-[1rem] text-gray-200">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    alt="" src="public/frame-12.svg">
+
+                                <div class="relative font-medium z-[1]">
+                                    Delivery Fee : Free
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="self-stretch flex flex-row flex-wrap items-start justify-start gap-[1.5rem] max-w-full">
+                <div
+                    class="flex-1 rounded-2xl box-border flex flex-row items-start justify-start pt-[1.5rem] pb-[1.38rem] pr-[2.38rem] pl-[1.5rem] gap-[1.25rem] min-w-[23.25rem] max-w-full border-[1px] border-solid border-gray-600 mq450:min-w-full mq850:flex-wrap">
+                    <div
+                        class="h-[13.63rem] w-[35.81rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                    </div>
+                    <img class="self-stretch w-[11.25rem] relative rounded-xl max-h-full object-cover min-h-[10.75rem] z-[1] mq850:flex-1"
+                        loading="eager" alt="" src="public/rectangle-4-4@2x.png">
+
+                    <div class="flex-1 flex flex-col items-start justify-start gap-[0.75rem] min-w-[12.63rem]">
+                        <div class="flex flex-row items-start justify-start gap-[1.19rem]">
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-17.svg">
+
+                                <div class="relative font-medium z-[1]">5.0</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-10.svg">
+
+                                <div class="relative font-medium z-[1]">20</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-11.svg">
+
+                                <div class="relative font-medium z-[1]">200</div>
+                            </div>
+                        </div>
+                        <div class="relative text-[1.25rem] font-extrabold text-gray-100 z-[1] mq450:text-[1rem]">
+                            World Cup Flags Football
+                        </div>
+                        <div
+                            class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.25rem] text-gray-300">
+                            <div class="h-[3.25rem] flex-1 relative leading-[1.63rem] font-medium inline-block z-[1]">
+                                Gear up for the ultimate football experience with our World Cup Flags.
+                            </div>
+                        </div>
+                        <div
+                            class="self-stretch flex flex-row items-center justify-start gap-[0.5rem] text-[1.13rem] text-tomato-200 mq450:flex-wrap">
+                            <div
+                                class="flex-[0.9118] flex flex-col items-start justify-start py-[0rem] pr-[0.75rem] pl-[0rem] box-border min-w-[5.5rem] mq450:flex-1">
+                                <div class="relative leading-[1.63rem] font-extrabold z-[1]">
+                                    Price - $22.00
+                                </div>
+                            </div>
+                            <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 z-[1]" loading="eager"
+                                alt="" src="public/frame-12.svg">
+
+                            <div
+                                class="flex-1 relative text-[1rem] font-medium text-gray-200 inline-block min-w-[5.5rem] z-[1]">
+                                Delivery Fee : Free
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex-1 rounded-2xl box-border flex flex-row items-start justify-start pt-[1.5rem] pb-[1.38rem] pr-[2.38rem] pl-[1.5rem] gap-[1.25rem] min-w-[23.25rem] max-w-full border-[1px] border-solid border-gray-600 mq450:min-w-full mq850:flex-wrap">
+                    <div
+                        class="h-[13.63rem] w-[35.81rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                    </div>
+                    <img class="self-stretch w-[11.25rem] relative rounded-xl max-h-full object-cover min-h-[10.75rem] z-[1] mq850:flex-1"
+                        loading="eager" alt="" src="public/rectangle-4-5@2x.png">
+
+                    <div class="flex-1 flex flex-col items-start justify-start gap-[0.75rem] min-w-[12.63rem]">
+                        <div class="flex flex-row items-start justify-start gap-[1.19rem]">
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-21.svg">
+
+                                <div class="relative font-medium z-[1]">5.0</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    loading="eager" alt="" src="public/frame-10.svg">
+
+                                <div class="relative font-medium z-[1]">20</div>
+                            </div>
+                            <div class="flex flex-row items-center justify-start gap-[0.5rem]">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    alt="" src="public/frame-11.svg">
+
+                                <div class="relative font-medium z-[1]">200</div>
+                            </div>
+                        </div>
+                        <div class="relative text-[1.25rem] font-extrabold text-gray-100 z-[1] mq450:text-[1rem]">
+                            World Cup Flags Football
+                        </div>
+                        <div
+                            class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.25rem] text-gray-300">
+                            <div class="h-[3.25rem] flex-1 relative leading-[1.63rem] font-medium inline-block z-[1]">
+                                Gear up for the ultimate football experience with our World Cup Flags.
+                            </div>
+                        </div>
+                        <div
+                            class="self-stretch flex flex-row items-center justify-start gap-[1.25rem] text-[1.13rem] text-tomato-200 mq450:flex-wrap">
+                            <div class="relative leading-[1.63rem] font-extrabold z-[1]">
+                                Price - $22.00
+                            </div>
+                            <div
+                                class="flex flex-row items-center justify-start gap-[0.5rem] text-[1rem] text-gray-200">
+                                <img class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                                    alt="" src="public/frame-12.svg">
+
+                                <div class="relative font-medium z-[1]">
+                                    Delivery Fee : Free
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="w-[75.63rem] flex flex-col items-start justify-start py-[0rem] px-[1.25rem] box-border gap-[3rem] max-w-full text-center text-[2.25rem] text-gray-100 font-manrope mq850:gap-[1.5rem]">
+        <div class="self-stretch flex flex-col items-center justify-start gap-[2rem] max-w-full mq850:gap-[1rem]">
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+            <div class="w-[37.94rem] flex flex-col items-center justify-start gap-[1.5rem] max-w-full shrink-0">
+                <h1
+                    class="m-0 h-[3.06rem] relative text-inherit font-extrabold font-inherit inline-block mq450:text-[1.38rem] mq850:text-[1.81rem]">
+                    Clients Question
+                </h1>
+                <div
+                    class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] font-medium text-gray-300 inline-block">
+                    Q: How can I track my order?
+A: We've made tracking your order hassle-free. Simply log in to your account on our website, go to the order history section, and you'll find real-time updates on your order status.
+                </div>
+            </div>
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+        </div>
+        <div
+            class="self-stretch rounded-2xl box-border flex flex-row items-start justify-start py-[2rem] pr-[2.5rem] pl-[2rem] gap-[2.5rem] max-w-full text-left text-[1.25rem] border-[1px] border-solid border-gray-600 mq850:gap-[1.25rem] mq850:pt-[1.31rem] mq850:pb-[1.31rem] mq850:box-border mq1225:flex-wrap">
+            <div
+                class="h-[33.38rem] w-[73.13rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+            </div>
+            <img class="w-[27.56rem] relative rounded-2xl max-h-full object-cover min-h-[29.38rem] max-w-full z-[1] mq1225:flex-1"
+                loading="eager" alt="" src="public/rectangle-4-6@2x.png">
+
+                <div
+                class="flex-1 flex flex-col items-start justify-start gap-[1rem] min-w-[25.06rem] max-w-full mq850:min-w-full">
+
+                <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" checked="checked" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Our Equipment
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Our equipment is equipped with the latest in technological advancements,ensuring you have access to the most innovative features and functionalities.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Hockey Training
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Our programs focus on honing essential hockey skills, including stickhandling, shooting, passing, and defensive techniques.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Private Lessons
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Receive specialized coaching on technical aspects specific to your sport. From fundamental techniques to advanced maneuvers.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" checked="checked" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Ski Touring
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Embark on a journey through snow-covered landscapes that are untouched and serene. Our ski touring routes are carefully selected to offer.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Booking
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Browse through our Ski Touring Adventures section to discover the diverse range of tours we offer.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-plus bg-base-200">
+                    <input type="radio" name="my-accordion-3" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Pricings
+                    </div>
+                    <div class="collapse-content"> 
+                      <p>Designed for experienced skiers seeking a thrilling challenge.</p>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+    </section>
+    <section
+        class="w-[75.63rem] flex flex-col items-start justify-start py-[0rem] px-[1.25rem] box-border gap-[3rem] max-w-full text-center text-[2.25rem] text-gray-100 font-manrope mq850:gap-[1.5rem]">
+        <div class="self-stretch flex flex-col items-center justify-start gap-[2rem] max-w-full mq850:gap-[1rem]">
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+            <div class="w-[37.94rem] flex flex-col items-center justify-start gap-[1.5rem] max-w-full shrink-0">
+                <h1
+                    class="m-0 h-[3.06rem] relative text-inherit font-extrabold font-inherit inline-block mq450:text-[1.38rem] mq850:text-[1.81rem]">
+                    Get In Touch
+                </h1>
+                <div
+                    class="self-stretch h-[3.25rem] relative text-[1rem] leading-[1.63rem] font-medium text-gray-300 inline-block">
+                    We value your feedback, inquiries, and the opportunity to connect. Whether you have questions about our products, need assistance with an order, or simply want to share your thoughts, we're here to listen and assist you.
+                </div>
+            </div>
+            <div class="self-stretch h-[0.06rem] relative box-border border-t-[1px] border-dashed border-gray-400">
+            </div>
+        </div>
+        <div
+            class="self-stretch flex flex-row items-start justify-start gap-[1.5rem] max-w-full text-left text-[1rem] text-gray-500 mq1225:flex-wrap">
+            <div
+                class="h-[47.75rem] w-[29.63rem] rounded-2xl box-border flex flex-col items-center justify-start py-[3.13rem] px-[3.06rem] gap-[1.5rem] min-w-[29.63rem] max-w-full border-[1px] border-solid border-gray-600 mq450:pt-[1.31rem] mq450:pb-[1.31rem] mq450:box-border mq850:py-[2rem] mq850:px-[1.5rem] mq850:box-border mq850:min-w-full mq1225:flex-1">
+                <div
+                    class="w-[29.63rem] h-[47.75rem] relative rounded-2xl box-border hidden max-w-full border-[1px] border-solid border-gray-600">
+                </div>
+                <div
+                    class="self-stretch flex-1 rounded-2xl bg-yellowgreen flex flex-col items-center justify-end py-[3rem] pr-[2.06rem] pl-[2rem] box-border relative max-w-full z-[1]">
+                    <div class="w-[23.38rem] h-[13.5rem] relative rounded-2xl bg-yellowgreen hidden max-w-full z-[0]">
+                    </div>
+                    <div class="self-stretch h-[4rem] relative leading-[2rem] inline-block z-[1]">
+                        <p class="m-0">Phone Number :</p>
+                        <p class="m-0 text-[1.13rem] font-extrabold text-gray-100">
+                            (+62) 123-321-543
+                        </p>
+                    </div>
+                    <input class="my-0 mx-[!important] w-[3rem] h-[3rem] absolute top-[2rem] left-[2rem] z-[1]"
+                        type="checkbox">
+                </div>
+                <div
+                    class="self-stretch rounded-2xl bg-khaki flex flex-col items-start justify-start pt-[1.5rem] px-[1.5rem] pb-[3.5rem] box-border gap-[1.5rem] max-w-full z-[1]">
+                    <div class="w-[23.38rem] h-[13.5rem] relative rounded-2xl bg-khaki hidden max-w-full"></div>
+                    <img class="w-[3rem] h-[3rem] relative z-[1]" loading="eager" alt=""
+                        src="public/group-1171275318.svg">
+
+                    <div class="w-[19.31rem] h-[4rem] relative leading-[2rem] inline-block z-[1]">
+                        <p class="m-0">Email :</p>
+                        <p class="m-0 text-[1.13rem] text-gray-100">
+                            <b>hockeys@support.com</b>
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="self-stretch rounded-2xl bg-cornflowerblue flex flex-col items-start justify-start p-[1.5rem] box-border gap-[1.5rem] max-w-full z-[1]">
+                    <div class="w-[23.38rem] h-[11.5rem] relative rounded-2xl bg-cornflowerblue hidden max-w-full">
+                    </div>
+                    <img class="w-[3rem] h-[3rem] relative z-[1]" loading="eager" alt=""
+                        src="public/group-1171275321.svg">
+
+                    <div class="w-[19.31rem] h-[4rem] relative leading-[2rem] inline-block z-[1]">
+                        <p class="m-0">Location :</p>
+                        <p class="m-0 text-[1.13rem] text-gray-100">
+                            <b>152/1 Mohakhali Wireless Gate</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex-1 flex flex-col items-start justify-start gap-[1rem] min-w-[27.31rem] max-w-full text-[1.25rem] text-gray-100 mq850:min-w-full">
+                <div
+                    class="self-stretch flex flex-row items-start justify-start gap-[1.5rem] max-w-full mq850:flex-wrap">
+                    <div
+                        class="flex-1 flex flex-col items-start justify-start gap-[1.5rem] min-w-[13.19rem] max-w-full">
+                        <div class="self-stretch flex flex-col items-start justify-start gap-[1rem]">
+                            <b class="h-[1.69rem] relative inline-block mq450:text-[1rem]">Your Name</b>
+                            <input
+                                class="w-full [border:none] [outline:none] bg-gray-800 self-stretch h-[4rem] rounded-xl flex flex-row items-center justify-start py-[1.31rem] px-[1.25rem] box-border font-manrope text-[1rem] text-gray-700 min-w-[12.13rem]"
+                                placeholder="Enter your full name" type="text">
+                        </div>
+                        <div class="self-stretch flex flex-col items-start justify-start gap-[1rem]">
+                            <b class="relative mq450:text-[1rem]">Subject</b>
+                            <input
+                                class="w-full [border:none] [outline:none] bg-gray-800 self-stretch h-[4rem] rounded-xl flex flex-row items-center justify-start py-[1.31rem] px-[1.25rem] box-border font-manrope text-[1rem] text-gray-700 min-w-[12.13rem]"
+                                placeholder="Enter your subject" type="text">
+                        </div>
+                        <b class="relative mq450:text-[1rem]">Message</b>
+                    </div>
+                    <div
+                        class="flex-1 flex flex-col items-start justify-start gap-[1.5rem] min-w-[13.19rem] max-w-full">
+                        <div class="self-stretch flex flex-col items-start justify-start gap-[1rem]">
+                            <b class="h-[1.69rem] relative inline-block mq450:text-[1rem]">Your Email</b>
+                            <input
+                                class="w-full [border:none] [outline:none] bg-gray-800 self-stretch h-[4rem] rounded-xl flex flex-row items-center justify-start py-[1.31rem] px-[1.25rem] box-border font-manrope text-[1rem] text-gray-700 min-w-[12.13rem]"
+                                placeholder="Enter your email" type="text">
+                        </div>
+                        <div class="self-stretch flex flex-col items-start justify-start gap-[1rem]">
+                            <b class="h-[1.69rem] relative inline-block mq450:text-[1rem]">Phone Number</b>
+                            <input
+                                class="w-full [border:none] [outline:none] bg-gray-800 self-stretch h-[4rem] rounded-xl flex flex-row items-center justify-start py-[1.31rem] px-[1.25rem] box-border font-manrope text-[1rem] text-gray-700 min-w-[12.13rem]"
+                                placeholder="Enter your phone number" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[1rem] box-border max-w-full">
+                    <textarea
+                        class="[border:none] bg-gray-800 h-[23.13rem] w-auto [outline:none] flex-1 rounded-xl flex flex-row items-start justify-start py-[1.31rem] px-[1.25rem] box-border font-manrope text-[1rem] text-gray-700 max-w-full"
+                        placeholder="Write your message" rows="{19}" cols="{34}">
+              </textarea>
+                </div>
+                <button
+                    class="cursor-pointer py-[0.94rem] pr-[1.31rem] pl-[1.25rem] bg-tomato-200 self-stretch rounded-xl flex flex-row items-center justify-center border-[1px] border-solid border-tomato-200 hover:bg-tomato-100 hover:box-border hover:border-[1px] hover:border-solid hover:border-tomato-100">
+                    <b class="relative text-[1.25rem] font-manrope text-white text-center mq450:text-[1rem]">Send
+                        Message</b>
+                </button>
+            </div>
+        </div>
+        <div
+            class="self-stretch rounded-xl bg-gray-800 flex flex-col items-center justify-start pt-[2.19rem] px-[2.13rem] pb-[2.13rem] box-border gap-[1.5rem] max-w-full text-[1.5rem]">
+            <div class="w-[73.13rem] h-[9.38rem] relative rounded-xl bg-gray-800 hidden max-w-full"></div>
+            <h3
+                class="m-0 h-[2.06rem] relative text-inherit font-extrabold font-inherit inline-block z-[1] mq450:text-[1.19rem]">
+                Social Media
+            </h3>
+            <div class="w-[10.88rem] flex flex-row items-center justify-between gap-[1.25rem]">
+                <img class="h-[1rem] w-[1.24rem] relative z-[1]" loading="eager" alt="" src="public/1.svg">
+
+                <img class="h-[1.35rem] w-[0.71rem] relative z-[1]" loading="eager" alt="" src="public/2.svg">
+
+                <img class="h-[1.5rem] w-[1.51rem] relative min-h-[1.5rem] z-[1]" loading="eager" alt=""
+                    src="public/3.svg">
+
+                <img class="h-[1.4rem] w-[1.44rem] relative z-[1]" loading="eager" alt="" src="public/4.svg">
+            </div>
+        </div>
+    </section>
+    <footer
+        class="self-stretch bg-gray-100 flex flex-row items-start justify-between py-[6.25rem] pr-[8.56rem] pl-[8.44rem] box-border gap-[1.25rem] max-w-full text-left text-[1.13rem] text-white font-manrope mq450:py-[4.06rem] mq450:px-[1.25rem] mq450:box-border mq850:pl-[4.19rem] mq850:pr-[4.25rem] mq850:box-border mq1225:flex-wrap"
+      >
+        <div
+          class="h-[28.38rem] w-[90rem] relative bg-gray-100 hidden max-w-full"
+        ></div>
+        <div
+          class="w-[21.63rem] flex flex-col items-start justify-start gap-[1rem] max-w-full text-[1rem]"
+        >
+          <h2
+            class="m-0 h-[2.38rem] relative text-[1.75rem] font-extrabold font-inherit inline-block z-[1] mq450:text-[1.38rem]"
+          >
+            Get In Touch
+          </h2>
+          <div
+            class="self-stretch flex flex-row items-start justify-start pt-[0rem] px-[0rem] pb-[0.5rem] box-border max-w-full text-gray-1000"
+          >
+            <div
+              class="h-[5.88rem] flex-1 relative leading-[1.63rem] font-medium whitespace-pre-wrap inline-block max-w-full z-[1]"
+            >
+            We value your feedback, inquiries, and the opportunity to connect. Whether you have questions about our products
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start justify-start gap-[1rem] text-gray-900"
+          >
+            <div class="flex flex-row items-center justify-start gap-[1rem]">
+              <img
+                class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                loading="eager"
+                alt=""
+                src="public/frame-31.svg"
+              >
+
+              <div class="relative font-medium whitespace-nowrap z-[1]">
+                hockeys@support.com
+              </div>
+            </div>
+            <div class="flex flex-row items-center justify-start gap-[1rem]">
+              <img
+                class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0 min-h-[1.5rem] z-[1]"
+                loading="eager"
+                alt=""
+                src="public/frame-32.svg"
+              >
+
+              <div class="relative font-medium z-[1]">(+62) 123-321-543</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[1.81rem]">
+          <b class="relative z-[1]">Company</b>
+          <div
+            class="h-[12.5rem] relative text-[1rem] leading-[2.5rem] font-medium text-gray-1000 inline-block z-[1]"
+          >
+            <p class="m-0">About us</p>
+            <p class="m-0">Leadership</p>
+            <p class="m-0">Careers</p>
+            <p class="m-0">News & Article</p>
+            <p class="m-0">Legal Notice</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[1.81rem]">
+          <b class="relative z-[1]">Support</b>
+          <div
+            class="h-[10rem] relative text-[1rem] leading-[2.5rem] font-medium text-gray-1000 inline-block z-[1]"
+          >
+            <p class="m-0">Help Center</p>
+            <p class="m-0">FAQ</p>
+            <p class="m-0">Ticket Support</p>
+            <p class="m-0">Contact Us</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start justify-start gap-[1.81rem]">
+          <b class="h-[1.56rem] relative inline-block z-[1]">Services</b>
+          <div
+            class="h-[12.5rem] relative text-[1rem] leading-[2.5rem] font-medium text-gray-1000 inline-block z-[1]"
+          >
+            <p class="m-0">Academy</p>
+            <p class="m-0">Group Lesson</p>
+            <p class="m-0">Private Lesson</p>
+            <p class="m-0">Hockeys for kids</p>
+            <p class="m-0">Hockeys for Adult</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+
+</body>
+
+</html>
